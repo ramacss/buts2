@@ -32,7 +32,7 @@
     <div class="flip top-flip"></div>
   </div>
 </div>
-<audio id="song" src="lagu/songs.mp3" loop></audio> <!-- Add your audio file path here -->
+<audio id="song" src="lagu/songs.mp3" loop></audio> <!-- Pastikan jalur file benar -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery.spritely/0.6.5/jquery.spritely.min.js'></script>
 <script>
@@ -40,14 +40,14 @@
     $('.envelope').click(function() {
       if (!$(this).hasClass('open')) {
         $(this).removeClass('new').addClass('open');
-        console.log("Envelope opened, trying to play audio...");
+        console.log("Amplop dibuka, mencoba memutar audio...");
         var audio = $("#song")[0];
         if (audio) {
           audio.play().catch(function(error) {
-            console.log("Error playing audio: " + error);
+            console.log("Kesalahan saat memutar audio: " + error);
           });
         } else {
-          console.log("Audio element not found.");
+          console.log("Elemen audio tidak ditemukan.");
         }
       }
     });
